@@ -1,0 +1,53 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(243, 249, 248);
+    z-index: 100;
+}
+
+.headline-span {
+    display: flex;
+    padding: 8px;
+}
+
+.myPortfolio {
+    display: flex;
+
+    :nth-child(2) {
+        padding: 0px 3px;
+        color: rgb(61, 207, 182);
+    }
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.line {
+    background-color: white;
+    width: 1px;
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    padding: 8px;
+
+    span {
+        display: flex;
+        padding-right: 6px;
+        gap: 3px;
+
+        :first-child {
+            color: rgb(61, 207, 182);
+        }
+
+        :last-child {
+            color: rgb(61, 207, 182);
+        }
+    }
+}
+

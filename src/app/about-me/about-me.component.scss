@@ -1,0 +1,66 @@
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.hexagon-container {
+    width: 500px;
+    aspect-ratio: 1.1547;
+    position: relative;
+    padding: 4px 8px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        z-index: -1;
+    }
+
+    &::before {
+        transform: rotate(60deg);
+    }
+
+    &::after {
+        transform: rotate(-60deg);
+    }
+
+    .hexagon {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+        background-color: #3DCFB6;
+        border: 3px solid #3DCFB6;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.AboutMeSpan {
+    color: rgb(243, 249, 248);
+    margin-left: 100px;
+    width: calc(100% - 400px);
+
+    h2 {
+        margin-top: 16px;
+        font-size: 36px;
+    }
+
+    p {
+        padding-top: 60px;
+        font-size: 16px;
+    }
+}
+
+.underline {
+    background-color: #3DCFB6;
+    height: 3px;
+    width: 70px;
+}

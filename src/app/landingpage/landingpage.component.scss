@@ -1,0 +1,73 @@
+.overallContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.content {
+    display: flex;
+
+    span {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+
+        img {
+            opacity: 0.3;
+            width: 100%;
+        }
+    }
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(243, 249, 248);
+    width: 400px
+}
+
+.headlineText1 {
+    color: rgb(61, 207, 182);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.headlineText2 {
+    color: rgb(243, 249, 248);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headlineP{
+    font-size: 24px;
+}
+
+.underline {
+    background-color: rgb(243, 249, 248);
+    height: 1px;
+    width: 80px;
+}
+
+.arrowDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+
+    img {
+        width: 80px;
+        height: 80px;
+        filter: invert(47%) sepia(27%) saturate(493%) hue-rotate(130deg) brightness(95%) contrast(94%);
+    }
+
+}
