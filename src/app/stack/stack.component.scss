@@ -46,3 +46,17 @@
         border: 1px solid rgb(243, 249, 248);
     }
 }
+
+.img-div{
+ padding: 20px 0px;
+ display: flex;
+ gap: 16px;
+ width: 100%;
+ justify-content: center;
+
+  img{
+
+   width: 550px;
+   height: 400px;
+  }
+}
