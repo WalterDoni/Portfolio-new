@@ -7,7 +7,9 @@
     width: 500px;
     aspect-ratio: 1.1547;
     position: relative;
-    padding: 4px 8px;
+    padding: 4px 60px;
+    filter: blur(8px);
+    animation: removeBlur 1.5s forwards;
 
     &::before,
     &::after {
@@ -43,10 +45,20 @@
     }
 }
 
+@keyframes removeBlur {
+  0% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
 .AboutMeSpan {
     color: rgb(243, 249, 248);
     margin-left: 100px;
     width: calc(100% - 400px);
+
 
     h2 {
         margin-top: 16px;

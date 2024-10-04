@@ -37,6 +37,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  font-size: 60px;
 }
 
 .textAnimationStartLeft {
@@ -46,10 +47,11 @@
 @keyframes textSlideInLeft {
   from {
     transform: translateX(-100%);
+    filter: blur(8px);
   }
-
   to {
     transform: translateX(0);
+    filter: blur(0px);
   }
 }
 
@@ -58,6 +60,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  font-size: 60px;
 }
 
 .textAnimationStartRight {
@@ -67,12 +70,14 @@
 @keyframes textSlideInRight {
   from {
     transform: translateX(100%);
+    filter: blur(8px);
   }
-
   to {
     transform: translateX(0);
+    filter: blur(0px);
   }
 }
+
 
 .headlineP {
   font-size: 24px;
@@ -81,7 +86,7 @@
   display: inline-block;
   position: relative;
   opacity: 0;
-  /* Start invisible */
+
 }
 
 .headlineP.showing {
@@ -116,8 +121,8 @@
 
 .underline {
   background-color: rgb(243, 249, 248);
-  height: 1px;
-  width: 80px;
+  height: 2px;
+  width: 115px;
 }
 
 .arrowDiv {

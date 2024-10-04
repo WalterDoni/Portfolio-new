@@ -10,15 +10,17 @@
 
 .headline-span {
   display: flex;
-  padding: 0px 8px;
 }
 
 .myPortfolio {
-  padding: 2px;
+  padding: 0px 10px 10px 10px;
   display: flex;
   height: 20px;
   background-color: #151515;
   border-radius: 0px 0px 10px 10px;
+  filter: blur(8px);
+  animation: removeBlur 1.5s forwards;
+  font-size: 25px;
 
   :nth-child(2) {
     padding: 0px 3px;
@@ -31,6 +33,11 @@
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  filter: blur(8px);
+  animation: removeBlur 1.5s forwards;
+  background-color: #151515;
+  border-radius: 0px 0px 10px 10px;
+  padding: 2px;
 }
 
 .line {
@@ -44,6 +51,9 @@
   padding: 8px;
   background-color: #151515;
   border-radius: 0px 0px 0px 10px;
+  filter: blur(8px);
+  animation: removeBlur 1.5s forwards;
+  font-size: 16px;
 
   span {
     display: flex;
@@ -57,5 +67,17 @@
     :last-child {
       color: rgb(61, 207, 182);
     }
+  }
+}
+
+
+
+/* Animation to remove the blur */
+@keyframes removeBlur {
+  0% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0);
   }
 }
