@@ -39,11 +39,39 @@
   flex-direction: column;
 }
 
+.textAnimationStartLeft {
+  animation: textSlideInLeft 1.5s;
+}
+
+@keyframes textSlideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 .headlineText2 {
   color: rgb(243, 249, 248);
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.textAnimationStartRight {
+  animation: textSlideInRight 1.5s;
+}
+
+@keyframes textSlideInRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .headlineP {

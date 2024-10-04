@@ -1,4 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-landingpage',
@@ -16,9 +19,16 @@ export class LandingpageComponent implements OnInit, OnDestroy {
   ];
   private currentIndex: number = 0;
   private intervalId: any;
+  private isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private renderer: Renderer2) {
+    this.isBrowser = isPlatformBrowser(this.platformId); // Prüft, ob der Code im Browser ausgeführt wird
+  }
 
   ngOnInit() {
-    this.displayGreetingMessages();
+    if (this.isBrowser) {
+      this.displayGreetingMessages(); // Nur im Browser Kontext wird die Funktion ausgeführt
+    }
   }
 
   displayGreetingMessages() {
@@ -26,22 +36,23 @@ export class LandingpageComponent implements OnInit, OnDestroy {
       if (this.currentIndex < this.messages.length) {
         const message = this.messages[this.currentIndex];
         this.greetingMessage = message;
-        const element = document.querySelector('.headlineP') as HTMLElement;
+
+        // Sicherstellen, dass der DOM-Zugriff nur im Browser erfolgt
+        const element = this.isBrowser ? document.querySelector('.headlineP') as HTMLElement : null;
         if (element) {
-          element.classList.remove('hiding');
-          element.classList.add('showing');
+          this.renderer.removeClass(element, 'hiding');
+          this.renderer.addClass(element, 'showing');
 
           setTimeout(() => {
-            element.classList.remove('showing');
-            element.classList.add('hiding');
-          }, 3000); // Match with CSS animation duration for showing
+            this.renderer.removeClass(element, 'showing');
+            this.renderer.addClass(element, 'hiding');
+          }, 3000); // Dauer für das Anzeigen und Verstecken der Nachricht
 
-          // Move to the next message after current message hides
+          // Wechsel zur nächsten Nachricht nach 5 Sekunden
           setTimeout(() => {
             this.currentIndex = (this.currentIndex + 1) % this.messages.length;
             updateMessage();
           }, 5000);
-
         }
       }
     };
