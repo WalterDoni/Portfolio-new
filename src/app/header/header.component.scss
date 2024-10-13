@@ -38,6 +38,15 @@
   background-color: #151515;
   border-radius: 0px 0px 10px 10px;
   padding: 2px;
+
+  img {
+    transition: filter .2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      filter: sepia(1) saturate(6) hue-rotate(120deg) brightness(0.9); 
+    }
+  }
 }
 
 .line {
@@ -77,6 +86,7 @@
   0% {
     filter: blur(8px);
   }
+
   100% {
     filter: blur(0);
   }

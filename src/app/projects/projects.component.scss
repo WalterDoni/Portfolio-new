@@ -28,9 +28,12 @@
   padding: 16px 60px 0px 60px;
   gap: 8px;
 
+
   img {
     width: 300px;
     height: 200px;
+    border: 2px ridge #3DCFB6;
+    border-radius: 8px;
   }
 
   p {
@@ -48,6 +51,8 @@
   img {
     width: 300px;
     height: 200px;
+    border: 2px ridge #3DCFB6;
+    border-radius: 8px;
   }
 
   p {
