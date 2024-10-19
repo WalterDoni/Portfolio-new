@@ -9,11 +9,21 @@
   display: flex;
 
   span {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
+    &:first-child {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+
+      &:last-child {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+      }
+    }
 
     img {
       opacity: 0.3;
@@ -39,7 +49,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .textAnimationStartLeft {
@@ -51,6 +61,7 @@
     transform: translateX(-100%);
     filter: blur(8px);
   }
+
   to {
     transform: translateX(0);
     filter: blur(0px);
@@ -62,7 +73,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  font-size: 60px;
+  font-size: 65px;
 }
 
 .textAnimationStartRight {
@@ -74,6 +85,7 @@
     transform: translateX(100%);
     filter: blur(8px);
   }
+
   to {
     transform: translateX(0);
     filter: blur(0px);
@@ -82,7 +94,7 @@
 
 
 .headlineP {
-  font-size: 24px;
+  font-size: 26px;
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;

@@ -4,7 +4,7 @@
 }
 
 .hexagon-container {
-    width: 500px;
+    width: 700px;
     aspect-ratio: 1.1547;
     position: relative;
     padding: 4px 60px;
@@ -58,6 +58,7 @@
     color: rgb(243, 249, 248);
     margin-left: 100px;
     width: calc(100% - 400px);
+    padding-right: 60px;
 
 
     h2 {
@@ -67,7 +68,7 @@
 
     p {
         padding-top: 60px;
-        font-size: 16px;
+        font-size: 24px;
     }
 }
 

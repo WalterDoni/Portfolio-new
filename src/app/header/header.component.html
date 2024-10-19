@@ -2,24 +2,47 @@
     <span class="headline-span">
         <span class="socialmedia">
             <div class="line"></div>
-            <img src="assets/img/Linkedinbutton.png" alt="Linkedinbutton">
-            <img src="assets/img/Githubbutton.png" alt="Github">
-            <img src="assets/img/Emailbutton.png" alt="Email">
+            <a href="https://www.linkedin.com/in/walter-doni-215180268/" target="_blank"><img
+                    src="assets/img/Linkedinbutton.png" alt="Linkedinbutton"></a>
+            <a href="https://github.com/WalterDoni?tab=repositories" target="_blank"><img src="assets/img/Githubbutton.png"
+                    alt="Github"></a>
+            <a (click)="onNavigate('contact')"><img src="assets/img/Emailbutton.png" alt="Email"></a>
+
         </span>
-        <span class="myPortfolio"><p>MEIN</p><p>|</p><p>PORTFOLIO</p></span>
-        
+        <span class="myPortfolio">
+            <p>MEIN</p>
+            <p>|</p>
+            <p>PORTFOLIO</p>
+        </span>
+
     </span>
     <span>
         <nav class="navbar">
-            <span>
-                <p> < </p><p>ÜBER MICH</p><p> > </p>
+            <span (click)="onNavigate('aboutme')">
+                <p>
+                    < </p>
+                        <p>ÜBER MICH</p>
+                        <p> > </p>
             </span>
-            <span><p> < </p><p>FÄHIGKEITEN</p><p> > </p>
+            <span (click)="onNavigate('stack')">
+                <p>
+                    < </p>
+                        <p>FÄHIGKEITEN</p>
+                        <p> > </p>
             </span>
-            <span><p> < </p><p>PROJEKTE</p><p> > </p>
+            <span (click)="onNavigate('projects')">
+                <p>
+                    < </p>
+                        <p>PROJEKTE</p>
+                        <p> > </p>
             </span>
-            <span><p> < </p><p>KONTAKT</p><p> > </p>
+            <span (click)="onNavigate('contact')">
+                <p>
+                    < </p>
+                        <p>KONTAKT</p>
+                        <p> > </p>
             </span>
         </nav>
+
     </span>
 </div>

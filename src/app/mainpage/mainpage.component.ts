@@ -11,10 +11,18 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-mainpage',
   standalone: true,
-  imports: [HeaderComponent, LandingpageComponent, AboutMeComponent, StackComponent,ProjectsComponent, ContactComponent, FooterComponent],
+  imports: [HeaderComponent, LandingpageComponent, AboutMeComponent, StackComponent, ProjectsComponent, ContactComponent, FooterComponent],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
 export class MainpageComponent {
 
+  constructor() { }
+
+  scrollTo(section: string) {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

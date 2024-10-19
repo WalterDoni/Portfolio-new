@@ -20,7 +20,7 @@
   border-radius: 0px 0px 10px 10px;
   filter: blur(8px);
   animation: removeBlur 1.5s forwards;
-  font-size: 25px;
+  font-size: 28px;
 
   :nth-child(2) {
     padding: 0px 3px;
@@ -57,17 +57,19 @@
 
 .navbar {
   display: flex;
+  gap: 6px;
   padding: 8px;
   background-color: #151515;
   border-radius: 0px 0px 0px 10px;
   filter: blur(8px);
   animation: removeBlur 1.5s forwards;
-  font-size: 16px;
+  font-size: 18px;
 
   span {
     display: flex;
     padding-right: 6px;
     gap: 3px;
+    cursor: pointer;
 
     :first-child {
       color: rgb(61, 207, 182);
