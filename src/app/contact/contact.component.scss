@@ -64,6 +64,7 @@ textarea {
   height: 300px;
   border: 2px ridge #3DCFB6;
   border-radius: 6px;
+  max-width: 1000px;
 }
 
 .img-span {
@@ -74,6 +75,7 @@ textarea {
 
   img {
     width: 80%;
+    max-width: 800px;
     height: 70%;
     border: 2px ridge #3DCFB6;
     border-radius: 8px;

@@ -44,7 +44,7 @@
 
     &:hover {
       cursor: pointer;
-      filter: sepia(1) saturate(6) hue-rotate(120deg) brightness(0.9); 
+      filter: sepia(1) saturate(6) hue-rotate(120deg) brightness(0.9);
     }
   }
 }
@@ -92,4 +92,15 @@
   100% {
     filter: blur(0);
   }
+}
+
+header {
+  transition: opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden; /* Unsichtbar, wenn nicht sichtbar */
+}
+
+header:not(.hidden) {
+  opacity: 1;
+  visibility: visible; /* Sichtbar, wenn sichtbar */
 }
