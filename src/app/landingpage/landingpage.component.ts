@@ -13,9 +13,9 @@ import { Renderer2 } from '@angular/core';
 export class LandingpageComponent implements OnInit, OnDestroy {
   greetingMessage: string = "";
   private messages: string[] = [
-    "Hallo",
-    "Mein Name ist Walter Doni",
-    "Willkommen auf meiner Webseite"
+    "Ein herzliches Servus und Hallo.",
+    "Willkommen auf meiner Webseite.",
+    "Ich bin der Walter."
   ];
   private currentIndex: number = 0;
   private intervalId: any;

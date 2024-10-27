@@ -5,8 +5,10 @@
             <div class="underline"></div>
         </div>
     </div>
-    <div class="imgLeftContainer">
-        <img src="assets/img/DaBubble.png" alt="">
+
+    <div class="imgRightContainer" (mouseenter)="onHoverVideoflix(true)" (mouseleave)="onHoverVideoflix(false)"
+        [ngClass]="{'hovered': Videoflix}">
+        @if(Videoflix){
         <div>
             <h1>VIDEOFLIX</h1>
             <h3>Angular | Django | HTML</h3>
@@ -17,9 +19,13 @@
                 Umgebung
             </p>
         </div>
+        }
+        @else { <img src="assets/img/DaBubble.png" alt="">}
     </div>
 
-    <div class="imgRightContainer">
+    <div class="imgRightContainer" (mouseenter)="onHoverDaBubble(true)" (mouseleave)="onHoverDaBubble(false)"
+        [ngClass]="{'hovered': DaBubble}">
+        @if(DaBubble){
         <div>
             <h1>DaBubble</h1>
             <h3>Angular | Typescript | Firebase</h3>
@@ -27,9 +33,11 @@
                 Registrieren Sie sich, nutzen Sie den Gäste-Login oder einfach mit dem Google-Konto einloggen.
             </p>
         </div>
-        <img src="assets/img/DaBubble.png" alt="">
+        }
+        @else { <img src="assets/img/DaBubble.png" alt="">}
     </div>
 
+    
     <div class="imgLeftContainer">
         <img src="assets/img/Fantasy.png" alt="">
         <div>
