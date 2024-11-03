@@ -6,10 +6,8 @@
         </div>
     </div>
 
-    <div class="imgRightContainer" (mouseenter)="onHoverVideoflix(true)" (mouseleave)="onHoverVideoflix(false)"
-        [ngClass]="{'hovered': Videoflix}">
-        @if(Videoflix){
-        <div>
+    <div class="imgContainer">
+        <div class="textContent">
             <h1>VIDEOFLIX</h1>
             <h3>Angular | Django | HTML</h3>
             <p>Eine Videoplattform, die es Administratoren ermöglicht, Videos hochzuladen und Nutzern, diese bequem
@@ -19,37 +17,38 @@
                 Umgebung
             </p>
         </div>
-        }
-        @else { <img src="assets/img/DaBubble.png" alt="">}
+        <div class="imageContent">
+            <img src="assets/img/DaBubble.png" alt="">
+        </div>
     </div>
 
-    <div class="imgRightContainer" (mouseenter)="onHoverDaBubble(true)" (mouseleave)="onHoverDaBubble(false)"
-        [ngClass]="{'hovered': DaBubble}">
-        @if(DaBubble){
-        <div>
+    <div class="imgContainer">
+        <div class="textContent">
             <h1>DaBubble</h1>
             <h3>Angular | Typescript | Firebase</h3>
             <p>Chat-Messenger inspiriert durch Slack. Der Gruppenchats, Direktnachrichten und eine Suchleiste bietet.
                 Registrieren Sie sich, nutzen Sie den Gäste-Login oder einfach mit dem Google-Konto einloggen.
             </p>
         </div>
-        }
-        @else { <img src="assets/img/DaBubble.png" alt="">}
+        <div class="imageContent">
+            <img src="assets/img/DaBubble.png" alt="">
+        </div>
     </div>
 
-    
-    <div class="imgLeftContainer">
-        <img src="assets/img/Fantasy.png" alt="">
-        <div>
+    <div class="imgContainer">
+        <div class="textContent">
             <h1>Fantasy Kingdom</h1>
             <h3>Javascript | HTML | CSS</h3>
             <p>Ein simples Jump-and-Run Spiel basierend auf Objektorientierung. Hilf dem Ritter das Böse zu besiegen.
             </p>
         </div>
+        <div class="imageContent">
+            <img src="assets/img/Fantasy.png" alt="">
+        </div>
     </div>
 
-    <div class="imgRightContainer">
-        <div>
+    <div class="imgContainer">
+        <div class="textContent">
             <h1>JOIN</h1>
             <h3>Javascript | HTML | CSS</h3>
             <p>Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren von Aufgaben mit
@@ -57,17 +56,23 @@
                 von Drag and Drop-Funktionen, Benutzer und Kategorien zuweisen.
             </p>
         </div>
-        <img src="assets/img/Join.png" alt="">
-    </div>
-
-    <div class="imgLeftContainer">
-        <img src="assets/img/simple-crm.jpg" alt="">
-        <div>
-            <h1>Simple-CRM</h1>
-            <h3>Angular | Typescript | Firebase | MaterialDesign</h3>
-            <p>Customer Relationship Management System. Erstelle und bearbeite Kunden. Siehe die gesamte Kaufkraft pro
-                Unternehmen.</p>
+        <div class="imageContent">
+            <img src="assets/img/Join.png" alt="">
         </div>
     </div>
+
+    <div class="imgContainer">
+        <div class="textContent"> 
+            <h1>Simple-CRM</h1>
+            <h3>Angular | Typescript | Firebase | MaterialDesign</h3>
+            <p>Customer Relationship Management System. Erstelle und bearbeite Kunden. Beobachte die gesamte Kaufkraft pro
+                Unternehmen.</p>
+        </div>
+        <div  class="imageContent">
+            <img src="assets/img/simple-crm.jpg" alt="">
+        </div>
+    </div>
+
+
 
 </div>

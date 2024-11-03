@@ -9,17 +9,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  DaBubble: boolean = false;
-  Videoflix: boolean = false;
 
-  @ViewChild('textBubble') textBubble!: ElementRef
-  constructor(){}
-
-  onHoverDaBubble(status: boolean) {
-    this.DaBubble = status; 
-  }
-
-  onHoverVideoflix(status: boolean){
-    this.Videoflix = status;
-  }
+  constructor() { }
 }
