@@ -14,12 +14,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 44px;
+
+  div {
+    width: 300px;
+  }
 }
 
 .underline {
   background-color: #3DCFB6;
   height: 3px;
-  width: 50px;
+  width: 50px !important;
 }
 
 .imgContainer {
@@ -50,6 +55,7 @@
     border-radius: 8px;
     opacity: 1;
     transition: opacity 0.5s ease;
+    object-fit: cover;
 
     &:hover {
       opacity: 0;
@@ -82,6 +88,7 @@
     text-align: center;
     transition: opacity .7s ease, filter .7s ease; // Filter-Übergang für Blureffekt
     flex-direction: column;
+    gap: 8px;
 
     h1,
     h3 {
@@ -90,8 +97,10 @@
 
     p {
       display: flex;
+      width: 85%;
       align-items: center;
       justify-content: center;
+
     }
 
     img {
@@ -104,7 +113,8 @@
 
   .textContent {
     opacity: 0;
-    backdrop-filter: blur(5px); // Hintergrundunschärfe beim Anzeigen des Textes
+    z-index: 1;
+    backdrop-filter: blur(5px);
   }
 
   &:hover .textContent {
@@ -113,11 +123,40 @@
 
   .imageContent {
     opacity: 1;
-    filter: blur(0); // Bild ohne Unschärfe
+    filter: blur(0);
   }
 
   &:hover .imageContent {
-    opacity: 0.6; // Teilweise Sichtbarkeit des Bildes beim Hover
-    filter: blur(8px); // Blureffekt beim Hover
+    opacity: 0.4;
+    filter: blur(8px);
+  }
+}
+
+.btn-div {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: unset !important;
+  height: unset !important;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: 2px ridge #3DCFB6;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    transition: background-color ease-in-out .2s, color ease-in-out .2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3DCFB6;
+      color: white;
+      cursor: pointer;
+    }
   }
 }

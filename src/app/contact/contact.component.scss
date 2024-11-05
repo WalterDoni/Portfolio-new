@@ -83,7 +83,6 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: cover;
   flex-direction: column;
   color: white;
   gap: 8px;
@@ -95,6 +94,7 @@ textarea {
     height: 70%;
     border: 2px ridge #3DCFB6;
     border-radius: 8px;
+    object-fit: contain;
   }
 }
 
