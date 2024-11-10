@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, viewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-stack',
@@ -13,22 +13,25 @@ export class StackComponent implements AfterViewInit {
   @ViewChild('imgBackend') imgBackend!: ElementRef;
 
   ngAfterViewInit() {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.showText();
-          observer.unobserve(entry.target); // Stoppe die Überwachung, nachdem der Text sichtbar ist
-        }
-        if (entry.isIntersecting) {
-          this.loadingIMG();
-          observer.unobserve(entry.target);
-        }
+    if (typeof IntersectionObserver !== 'undefined') {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.showText();
+            observer.unobserve(entry.target);
+          }
+          if (entry.isIntersecting) {
+            this.loadingIMG();
+            observer.unobserve(entry.target);
+          }
+        });
       });
-    });
-    observer.observe(this.infoText.nativeElement); // Überwache das infoText-Element
-    observer.observe(this.imgFrontend.nativeElement);
+      observer.observe(this.infoText.nativeElement);
+      observer.observe(this.imgFrontend.nativeElement);
+    } else {
+      console.warn('IntersectionObserver is not available in this environment.');
+    }
   }
-
 
   loadingIMG() {
     this.imgFrontend.nativeElement.style.transform = "rotate(0deg) translateX(0)";

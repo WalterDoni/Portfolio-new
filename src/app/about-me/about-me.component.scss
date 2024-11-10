@@ -37,7 +37,6 @@
   width: 50px !important;
 }
 
-
 .AboutMeSpan {
   color: rgb(243, 249, 248);
   margin-left: 100px;
@@ -46,13 +45,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 32px;
+  filter: blur(8px);
+  transition: filter 1.5s;
 
   img {
     width: 400px;
     height: 400px;
     border: 2px ridge #3DCFB6;
     border-radius: 8px;
+
   }
 
   p {

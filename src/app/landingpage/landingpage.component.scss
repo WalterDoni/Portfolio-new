@@ -103,47 +103,6 @@
   }
 }
 
-
-.headlineP {
-  font-size: 26px;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
-  opacity: 0;
-  color: white;
-}
-
-.headlineP.showing {
-  opacity: 1;
-  animation: slideIn 1s forwards;
-}
-
-.headlineP.hiding {
-  animation: fadeOut 1s forwards;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-
 .underline {
   background-color: rgb(243, 249, 248);
   height: 2px;
@@ -202,5 +161,40 @@
 @keyframes rotateInfinite {
   to {
     transform: rotate(360deg);
+  }
+}
+.headlineP {
+  font-size: 26px;
+  opacity: 1;
+  color: white;
+  animation: slideIn 1s forwards;
+}
+
+.headlineP.showing {
+  opacity: 1;
+  animation: slideIn 1s forwards;
+}
+
+.headlineP.hiding {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }

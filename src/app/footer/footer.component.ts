@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +10,19 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  constructor(private router: Router) { }
+
+  @Output() navigate = new EventEmitter<string>();
+
+  onNavigate(section: string) {
+    this.navigate.emit(section);
+  }
+
+  navigateToImprint(){
+    this.router.navigateByUrl('imprint');
+  }
+
+  navigateToDataprotection(){
+    this.router.navigateByUrl('dataprotection')
+  }
 }
