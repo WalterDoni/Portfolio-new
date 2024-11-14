@@ -161,3 +161,14 @@
     }
   }
 }
+
+@media (max-width: 1130px) {
+  .headline {
+    display: flex;
+    align-items: center;
+
+    div {
+      width: unset;
+    }
+  }
+}

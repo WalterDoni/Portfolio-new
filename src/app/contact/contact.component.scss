@@ -119,3 +119,34 @@ textarea {
     }
   }
 }
+
+@media (max-width: 1460px) {
+  .resp80percant {
+    width: 80%;
+  }
+}
+
+@media (max-width: 940px) {
+
+  .content {
+    justify-content: center;
+  }
+
+  .img-span {
+    display: none;
+  }
+
+  .contact-span {
+    width: 100%;
+  }
+
+  .headline {
+    display: flex;
+    align-items: center;
+  }
+
+  .form-div,
+  .contact-form {
+    align-items: center;
+  }
+}
