@@ -97,10 +97,26 @@
 header {
   transition: opacity 0.5s, visibility 0.5s;
   opacity: 0;
-  visibility: hidden; /* Unsichtbar, wenn nicht sichtbar */
+  visibility: hidden;
+  /* Unsichtbar, wenn nicht sichtbar */
 }
 
 header:not(.hidden) {
   opacity: 1;
-  visibility: visible; /* Sichtbar, wenn sichtbar */
+  visibility: visible;
+  /* Sichtbar, wenn sichtbar */
+}
+
+@media (max-width: 875px) {
+  .myPortfolio {
+    font-size: 22px;
+  }
+
+  .navbar {
+    font-size: 12px;
+  }
+
+  .line {
+    height: 25px;
+  }
 }

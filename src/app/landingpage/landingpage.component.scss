@@ -204,3 +204,31 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+
+  .content {
+
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  .headlineText1,
+  .headlineText2 {
+    font-size: 60px;
+  }
+
+  .underline {
+    width: 80px;
+  }
+
+  .arrowDiv {
+    bottom: 30px;
+  }
+
+  .headlineP {
+    font-size: 20px;
+  }
+}

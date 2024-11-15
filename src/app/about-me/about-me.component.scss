@@ -68,7 +68,6 @@
     padding: 40px 0px;
   }
 
-
   .headline {
     display: flex;
     align-items: center;
@@ -78,5 +77,19 @@
     }
   }
 
+  .AboutMeSpan {
+    width: 95%;
+    margin-left: 32px;
+  }
 
+}
+
+@media (max-width: 920px) {
+
+  .AboutMeSpan {
+
+    img {
+      display: none;
+    }
+  }
 }
