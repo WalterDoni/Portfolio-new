@@ -172,3 +172,31 @@
     }
   }
 }
+
+@media (max-width: 640px) {
+
+  .headline {
+    div {
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .underline {
+    width: 40px !important;
+  }
+
+}
+
+@media (max-width: 730px) {
+
+  .imgContainer {
+    width: 100%;
+  }
+
+  .textContent,
+  .imageContent {
+    width: 90%!important;
+  }
+}

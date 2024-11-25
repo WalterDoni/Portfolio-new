@@ -120,3 +120,32 @@ header:not(.hidden) {
     height: 25px;
   }
 }
+
+@media (max-width: 670px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .myPortfolio {
+    border-radius: 0px 0px 10px 0px;
+    font-size: 20px;
+  }
+
+  .headline-span {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .socialmedia {
+    flex-direction: unset;
+    width: 105px;
+  }
+
+  .line {
+    display: none;
+  }
+}

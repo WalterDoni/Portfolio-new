@@ -18,7 +18,7 @@
 
     border: 2px ridge #3DCFB6;
     border-radius: 8px;
-    transform: translateX(60%) translateY(-30%);
+    transform: translateX(20%) translateY(-30%);
     filter: blur(8px);
     animation: resetTransform 2s forwards;
 
@@ -71,7 +71,7 @@
 
 @keyframes textSlideInLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
     filter: blur(8px);
   }
 
@@ -95,7 +95,7 @@
 
 @keyframes textSlideInRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(20%);
     filter: blur(8px);
   }
 
@@ -230,5 +230,38 @@
 
   .headlineP {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .headlineText1,
+  .headlineText2 {
+    font-size: 45px;
+  }
+
+  .headline {
+    width: 290px;
+  }
+
+  .underline {
+    width: 70px;
+  }
+
+  .content {
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+
+  .content {
+    img {
+      width: 300px;
+      height: 300px;
+    }
   }
 }

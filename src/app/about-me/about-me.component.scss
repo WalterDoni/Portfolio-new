@@ -87,9 +87,32 @@
 @media (max-width: 920px) {
 
   .AboutMeSpan {
+    padding-right: 0px;
+    margin-left: 0;
 
     img {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+
+  .headline {
+    div {
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .underline {
+    width: 40px!important;
+  }
+
+  .AboutMeSpan {
+    p {
+      font-size: 20px;
     }
   }
 }
