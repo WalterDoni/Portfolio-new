@@ -55,7 +55,7 @@
     border-radius: 8px;
     opacity: 1;
     transition: opacity 0.5s ease;
-    object-fit: cover;
+
 
     &:hover {
       opacity: 0;
@@ -71,7 +71,7 @@
 
 .imgContainer {
   position: relative;
-  width: 700px;
+  width: 100%;
   height: 350px;
   overflow: hidden;
 
@@ -79,7 +79,6 @@
   .imageContent {
     position: absolute;
     top: 5px;
-    left: 0;
     width: 700px;
     height: 300px;
     display: flex;
@@ -173,6 +172,28 @@
   }
 }
 
+@media (max-width: 730px) {
+
+  .textContent,
+  .imageContent {
+    width: 400px !important;
+    height: 250px !important;
+
+    img {
+      width: 100%!important;
+    }
+  }
+
+  .imgContainer {
+    width: 100%;
+    height: 280px;
+  }
+
+  .content {
+    padding-bottom: 16px;
+  }
+}
+
 @media (max-width: 640px) {
 
   .headline {
@@ -189,14 +210,24 @@
 
 }
 
-@media (max-width: 730px) {
-
-  .imgContainer {
-    width: 100%;
-  }
+@media (max-width: 430px) {
 
   .textContent,
   .imageContent {
-    width: 90%!important;
+    width: 90% !important;
+    height: 220px!important;
+  }
+
+  .imgContainer {
+    height: 210px;
   }
 }
+
+@media (max-width: 400px) {
+
+  .textContent,
+  .imageContent {
+    height: 200px!important;
+  }
+}
+
