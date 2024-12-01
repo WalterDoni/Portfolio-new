@@ -174,19 +174,43 @@
 
 @media (max-width: 730px) {
 
-  .textContent,
   .imageContent {
     width: 400px !important;
     height: 250px !important;
 
     img {
-      width: 100%!important;
+      width: 100% !important;
+    }
+  }
+
+  .textContent {
+    width: 400px !important;
+    height: 250px !important;
+    gap: 4px!important;
+
+    h1 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+
+  .btn-div {
+
+    a {
+      width: 90px;
+      height: 25px;
     }
   }
 
   .imgContainer {
     width: 100%;
     height: 280px;
+
   }
 
   .content {
@@ -215,7 +239,7 @@
   .textContent,
   .imageContent {
     width: 90% !important;
-    height: 220px!important;
+    height: 220px !important;
   }
 
   .imgContainer {
@@ -227,7 +251,6 @@
 
   .textContent,
   .imageContent {
-    height: 200px!important;
+    height: 200px !important;
   }
 }
-
