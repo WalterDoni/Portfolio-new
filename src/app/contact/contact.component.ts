@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
@@ -6,7 +6,7 @@ import { firstValueFrom } from 'rxjs';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -26,7 +26,7 @@ export class ContactComponent {
     };
 
     try {
-      const response = await firstValueFrom(this.http.post('ADRESSE EINFÜGEN', mailValues));
+      const response = await firstValueFrom(this.http.post('http://email-senden.walter-doni.at/send-mail/', mailValues));
       this.clearValuesFromFormForEmail();
       alert('Nachricht gesendet')
     } catch (error) {
