@@ -26,7 +26,7 @@ export class ContactComponent {
     };
 
     try {
-      const response = await firstValueFrom(this.http.post('http://email-senden.walter-doni.at/send-mail/', mailValues));
+      const response = await firstValueFrom(this.http.post('https://email-senden.walter-doni.at/send-mail/', mailValues));
       this.clearValuesFromFormForEmail();
       alert('Nachricht gesendet')
     } catch (error) {
