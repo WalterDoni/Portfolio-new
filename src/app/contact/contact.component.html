@@ -1,4 +1,5 @@
 <div class="content">
+  <div class="email-send" #emailsend><p>Email wurde gesendet.</p></div>
   <span class="img-span">
     <img src="/assets/img/questions1.png" alt="">
   </span>
@@ -11,7 +12,7 @@
     </div>
     <div class="form-div">
       <div class="resp80percant"><h3 class="text-underline">Noch Fragen oder gefallen dir meine Projekte? Dann schreib mir doch einfach eine E-Mail.</h3></div>
-      <form (ngSubmit)="sendMail()" class="contact-form">
+      <form (submit)="sendMail()" class="contact-form">
         <div>
           <h3>Name*</h3>
           <input type="text" placeholder="Name..."  [(ngModel)]="name" name="name" required>
@@ -21,7 +22,7 @@
           <textarea type="text" placeholder="Nachricht..."  [(ngModel)]="message" name="message" required></textarea>
         </div>
         <div class="btn-div">
-          <button>Senden</button>
+          <button type="submit">Senden</button>
         </div>
       </form>
     </div>

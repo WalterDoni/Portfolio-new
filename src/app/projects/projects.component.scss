@@ -177,6 +177,7 @@
   .imageContent {
     width: 400px !important;
     height: 250px !important;
+    gap: 4px;
 
     img {
       width: 100% !important;
@@ -189,20 +190,20 @@
     gap: 4px!important;
 
     h1 {
-      font-size: 28px;
+      font-size: 26px;
     }
     h3 {
-      font-size: 18px;
+      font-size: 16px;
     }
     p{
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
   .btn-div {
-
+    gap: 8px;
     a {
-      width: 90px;
+      width: 70px;
       height: 25px;
     }
   }

@@ -1,6 +1,7 @@
 .content {
   width: 100%;
   display: flex;
+  position: relative;
 }
 
 .headline {
@@ -150,3 +151,36 @@ textarea {
     align-items: center;
   }
 }
+
+.email-send {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease, transform 1s ease;
+
+  p {
+    background-color: #3DCFB6;
+    border-radius: 10px;
+    padding: 16px;
+    color: rgb(21, 21, 21);
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  &.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+

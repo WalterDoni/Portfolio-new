@@ -1,5 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Element } from '@angular/compiler';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
 
@@ -14,6 +15,7 @@ export class ContactComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+  @ViewChild('emailsend') emailsend!: ElementRef;
 
 
   constructor(private http: HttpClient) { }
@@ -28,7 +30,7 @@ export class ContactComponent {
     try {
       const response = await firstValueFrom(this.http.post('https://email-senden.walter-doni.at/send-mail/', mailValues));
       this.clearValuesFromFormForEmail();
-      alert('Nachricht gesendet')
+      this.showSuccessMessage();
     } catch (error) {
       console.error('Fehler beim Senden der Email', error);
     }
@@ -38,6 +40,19 @@ export class ContactComponent {
     this.name = '';
     this.email = '';
     this.message = '';
+  }
+
+  showSuccessMessage() {
+    this.emailsend.nativeElement.style.display = "flex";
+    setTimeout(() => {
+      this.emailsend.nativeElement.classList.add('show');
+    }, 0);
+    setTimeout(() => {
+      this.emailsend.nativeElement.classList.remove('show');
+      setTimeout(() => {
+        this.emailsend.nativeElement.style.display = "none";
+      }, 1000);
+    }, 3000);
   }
 
 
