@@ -1,5 +1,4 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Element } from '@angular/compiler';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
@@ -15,10 +14,29 @@ export class ContactComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+  validate: boolean = false;
   @ViewChild('emailsend') emailsend!: ElementRef;
 
 
   constructor(private http: HttpClient) { }
+
+
+  checkInputs() {
+    this.validate = this.isNameValid() && this.isEmailValid() && this.isMessageValid();
+  }
+
+  isNameValid(): boolean {
+    return this.name?.trim().length >= 3;
+  }
+
+  isEmailValid(): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(this.email);
+  }
+
+  isMessageValid(): boolean {
+    return this.message?.trim().length >= 3;
+  }
 
   async sendMail() {
     const mailValues = {
@@ -27,8 +45,10 @@ export class ContactComponent {
       message: this.message
     };
 
+    console.log('Sending email with values:', mailValues); // Debugging
+
     try {
-      const response = await firstValueFrom(this.http.post('https://email-senden.walter-doni.at/send-mail/', mailValues));
+      const response = await firstValueFrom(this.http.post('https://email.walter-doni.at/send-mail/', mailValues));
       this.clearValuesFromFormForEmail();
       this.showSuccessMessage();
     } catch (error) {
@@ -36,10 +56,12 @@ export class ContactComponent {
     }
   }
 
+
   clearValuesFromFormForEmail() {
     this.name = '';
     this.email = '';
     this.message = '';
+    this.validate = false;
   }
 
   showSuccessMessage() {

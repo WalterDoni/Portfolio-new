@@ -70,13 +70,18 @@
     padding-right: 6px;
     gap: 3px;
     cursor: pointer;
+    transition: color ease-in-out .2s;
 
     :first-child {
-      color: rgb(61, 207, 182);
+      color: #3DCFB6;
     }
 
     :last-child {
-      color: rgb(61, 207, 182);
+      color: #3DCFB6;
+    }
+
+    &:hover {
+      color: #3DCFB6;
     }
   }
 }
@@ -98,13 +103,18 @@ header {
   transition: opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  /* Unsichtbar, wenn nicht sichtbar */
 }
 
 header:not(.hidden) {
   opacity: 1;
   visibility: visible;
-  /* Sichtbar, wenn sichtbar */
+}
+
+@media (max-width: 1130px) {
+  .navbar {
+    display: none;
+  }
+
 }
 
 @media (max-width: 875px) {
@@ -148,4 +158,97 @@ header:not(.hidden) {
   .line {
     display: none;
   }
+}
+
+
+//--Burger-Btn--//
+
+.burger-btn {
+  display: none;
+  top: 50px;
+  right: 0;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+
+  @media (max-width: 1130px) {
+    display: unset;
+  }
+
+  @media (max-width: 600px) {
+    width: 35px;
+  }
+}
+
+.burger-btn:before,
+.burger-btn:after,
+.burger-btn div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+
+  @media (max-width: 600px) {
+    height: 4px;
+  }
+}
+
+.burger-btn.clicked:before {
+  transform: translateY(12px) rotate(135deg);
+  background-color: #3DCFB6;
+}
+
+.burger-btn.clicked:after {
+  transform: translateY(-12px) rotate(-135deg);
+  background-color: #3DCFB6;
+}
+
+.burger-btn.clicked div {
+  transform: scale(0);
+}
+
+
+.resp-menu-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(21, 21, 21, 0.8);
+  top: 0;
+  left: 100%;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
+  width: 100%;
+  transition: left 0.5s ease;
+
+  :active {
+    left: 0;
+  }
+
+  a {
+    cursor: pointer;
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 20px;
+
+    &:hover {
+      color: #3DCFB6;
+    }
+  }
+
+  @media(max-width: 1130px) {
+    display: flex;
+  }
+
+}
+
+.active-menu {
+  left: 0;
 }

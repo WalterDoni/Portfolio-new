@@ -12,8 +12,23 @@ export class HeaderComponent {
   constructor() { }
 
   @Output() navigate = new EventEmitter<string>();
+  burgermenu = false;
 
   onNavigate(section: string) {
     this.navigate.emit(section);
+    if(window.innerWidth <= 1130) {
+      this.burgermenu = false;
+    }
+  }
+
+
+
+
+  showMenu() {
+    if (this.burgermenu == false) {
+      this.burgermenu = true;
+    } else {
+      this.burgermenu = false;
+    }
   }
 }

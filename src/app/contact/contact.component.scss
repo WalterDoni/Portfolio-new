@@ -109,14 +109,24 @@ textarea {
   justify-content: center;
 
   button {
+    background-color: #3DCFB6;
     border: 2px ridge #3DCFB6;
+    color: white;
     border-radius: 8px;
     transition: background-color ease-in-out .2s, color ease-in-out .2s;
 
     &:hover {
-      background-color: #3DCFB6;
-      color: white;
+      background-color: #1ba08a;
+      color: rgb(31, 31, 31);
       cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: #e9ecef;
+      color: #6c757d;
+      border: 2px solid #e9ecef;
+      pointer-events: none;
+      cursor: not-allowed;
     }
   }
 }

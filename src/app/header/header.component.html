@@ -45,4 +45,15 @@
         </nav>
 
     </span>
+    <div class="burger-btn" (click)="showMenu()" [class.clicked]="burgermenu">
+      <div></div>
+  </div>
+
+  <div class="resp-menu-container" [class.active-menu]="burgermenu">
+      <a  (click)="onNavigate('aboutme')">ÜBER MICH</a>
+      <a (click)="onNavigate('stack')">FÄHIGKEITEN</a>
+      <a (click)="onNavigate('projects')">PROJEKTE</a>
+      <a (click)="onNavigate('contact')">KONTAKT</a>
+
+  </div>
 </div>

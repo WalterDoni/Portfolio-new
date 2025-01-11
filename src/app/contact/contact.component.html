@@ -15,14 +15,15 @@
       <form (submit)="sendMail()" class="contact-form">
         <div>
           <h3>Name*</h3>
-          <input type="text" placeholder="Name..."  [(ngModel)]="name" name="name" required>
+          <input type="text" placeholder="Name..."  [(ngModel)]="name" name="name" required  (input)="checkInputs()">
           <h3>Email*</h3>
-          <input type="email" placeholder="E-Mail-Adresse..."  [(ngModel)]="email" name="email" required>
+          <input type="email" placeholder="E-Mail-Adresse..."  [(ngModel)]="email" name="email" required  (input)="checkInputs()">
+
           <h3>Nachricht*</h3>
-          <textarea type="text" placeholder="Nachricht..."  [(ngModel)]="message" name="message" required></textarea>
+          <textarea type="text" placeholder="Nachricht..."  [(ngModel)]="message" name="message" required  (input)="checkInputs()"></textarea>
         </div>
         <div class="btn-div">
-          <button type="submit">Senden</button>
+          <button type="submit" [disabled]="!validate">Senden</button>
         </div>
       </form>
     </div>
